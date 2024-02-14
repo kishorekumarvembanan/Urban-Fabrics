@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/men.css">
+    <link rel="icon" href="../u.png" type="image/icon type">
+    <title>URBAN FABRICS</title>
+</head>
+<body>
+    <style>
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for form labels */
+        form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* Style for form input fields */
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="number"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        /* Style for submit buttons */
+        form button[type="submit"] {
+            background-color: #07a152;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #056a3e;
+        }
+
+        /* Style for file input */
+        form input[type="file"] {
+            display: none;
+        }
+
+        /* Style for custom file input button */
+        .custom-file-input {
+            background-color: #07a152;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Style for file name display */
+        .file-name {
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+    </style>
+    <div class="tot-navbar">
+        <div class="navbar">
+            <div class="firstnav">
+                <a href="home.html"><h3>URBAN FABRICS</h3></a>
+            </div>
+            <div class="logo">
+                <img class="logoimg" src="../u.png">
+            </div>
+            <div class="secnav">
+                <input id="search-bar" type="text" placeholder="search here">
+                <img class="search-sym" src="../home_navbar_img/searchicon.png">
+            </div>
+            <div class="seller">
+                <a href="#"></a>
+            </div>
+            <div class="lastnav">
+                <img class="wishlist" src="../home_navbar_img/heart1.png">
+                <a href="#">Wishlist</a>
+                <img  class="cart" src="../home_navbar_img/cart.png">
+                <a href="cart.html">Cart</a>
+            </div>
+        
+        </div>
+        <div class="select-section">
+            <div class="icon-sym">
+                <div class="home">
+                    <a href="home.html"><img src="../icon_sym/home1.png"></a>
+                    <a href="home.html">Home</a>
+                </div>
+                <div class="men">
+                    <a href="men.html"><img src="../icon_sym/male-clothes.png"></a>
+                    <a href="men.html">Men</a>
+                </div>
+                <div class="women">
+                    <a href="women.html"><img src="../icon_sym/woman_clothes.png"></a>
+                    <a href="women.html">Women</a>
+                </div>
+                <div class="kids">
+                    <a href="kids.html"><img src="../icon_sym/tshirt.png"></a>
+                    <a href="kids.html">Kids</a>
+                </div>
+                <div class="footwear">
+                    <a href="footwear.html"><img src="../icon_sym/boot1.png"></a>
+                    <a href="footwear.html">Footwear</a>
+                </div>
+                <div class="homedecor">
+                    <a href="homedecor.html"><img src="../icon_sym/living-room1.png"></a>
+                    <a href="homedecor.html">Home decor</a>
+                </div>
+                <div class="top-brand">
+                    <a href="gift.html"><img src="../icon_sym/woman-bag.png"></a>
+                    <a href="gift.html">Handbags & wallet</a>
+                </div>
+                <div class="top-brand">
+                    <a href="flooring.html"><img src="../icon_sym/carpet.png"></a>
+                    <a href="flooring.html">Flooring</a>
+                </div>
+                <div class="top-brand">
+                    <a href="beauty.html"><img src="../icon_sym/products.png"></a>
+                    <a href="beauty.html">Beauty</a>
+                </div>
+                <div class="top-brand">
+                    <a href="electronics.html"><img src="../icon_sym/electronics.png"></a>
+                    <a href="electronics.html">Electronics</a>
+                </div>
+                <div class="top-brand">
+                    <a href="topbrand.html"><img src="../icon_sym/achievement.png"></a>
+                    <a href="topbrand.html">Top Brand</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tform">
+        <form id="sellerForm">
+            <label for="sellerName">Seller Name:</label>
+            <input type="text" id="sellerName" name="sellerName" required><br>
+        
+            <label for="contactEmail">Contact Email:</label>
+            <input type="email" id="contactEmail" name="contactEmail" required><br>
+        
+            <!-- Other seller details inputs -->
+        
+            <button type="submit">Submit</button>
+        </form>
+        <form id="productForm">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" name="productName" required><br>
+        
+            <label for="productDescription">Product Description:</label>
+            <textarea id="productDescription" name="productDescription" required></textarea><br>
+        
+            <label for="productPrice">Product Price:</label>
+            <input type="number" id="productPrice" name="productPrice" required><br>
+        
+            <label for="productImage">Product Image:</label>
+            <input type="file" id="productImage" name="productImage" accept="image/*" required><br>
+        
+            <button type="submit">Add Product</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sellerForm = document.getElementById("sellerForm");
+            const productForm = document.getElementById("productForm");
+
+            sellerForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                const sellerDetails = {
+                    name: document.getElementById("sellerName").value,
+                    email: document.getElementById("contactEmail").value,
+                    // Collect other details here
+                };
+
+                // Save seller details to a database or storage
+                // You can use AJAX or other methods to send data to the server
+                
+                // Clear form inputs
+                sellerForm.reset();
+            });
+
+            productForm.addEventListener("submit", function(event) {
+                event.preventDefault();
+                
+                const productName = document.getElementById("productName").value;
+                const productDescription = document.getElementById("productDescription").value;
+                const productPrice = parseFloat(document.getElementById("productPrice").value);
+                const productImage = document.getElementById("productImage").files[0];
+
+                // Save product details and image to a database or storage
+                // You can use AJAX or other methods to send data to the server
+                
+                // Clear form inputs
+                productForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css"> <!-- Add your payment page styles -->
+    <link rel="icon" href="../u.png" type="image/icon type">
+    <title>Payment - URBAN FABRICS</title>
+</head>
+<body>
+    <style>
+        .navbar{
+            background-color: rgb(105, 225, 248);
+        }
+        /* payment.css */
+
+        /* Add your payment page styles here */
+        .payment-form {
+            top: 150px;
+            position: relative;
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-form h2 {
+            margin-top: 0;
+        }
+
+        .payment-form label,
+        .payment-form input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .payment-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .payment-form button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+    <div class="tot-navbar">
+        <div class="navbar">
+            <div class="firstnav">
+                <a href="home.html"><h3>URBAN FABRICS</h3></a>
+            </div>
+            <div class="logo">
+                <img class="logoimg" src="../u.png">
+            </div>
+            <div class="secnav">
+                <input id="search-bar" type="text" placeholder="search here">
+                <img class="search-sym" src="../home_navbar_img/searchicon.png">
+            </div>
+            <div class="seller">
+                <a href="seller.html"></a>
+            </div>
+            <div class="lastnav">
+                <img class="wishlist" src="../home_navbar_img/heart1.png">
+                <a href="#">Wishlist</a>
+                <img  class="cart" src="../home_navbar_img/cart.png">
+                <a href="../main/cart.html">Cart</a>
+                
+            </div>
+        
+        </div>
+        <div class="select-section">
+            <div class="icon-sym">
+                <div class="home">
+                    <a href="home.html"><img src="../icon_sym/home1.png"></a>
+                    <a href="home.html">Home</a>
+                </div>
+                <div class="men">
+                    <a href="men.html"><img src="../icon_sym/male-clothes.png"></a>
+                    <a href="men.html">Men</a>
+                </div>
+                <div class="women">
+                    <a href="women.html"><img src="../icon_sym/woman_clothes.png"></a>
+                    <a href="women.html">Women</a>
+                </div>
+                <div class="kids">
+                    <a href="kids.html"><img src="../icon_sym/tshirt.png"></a>
+                    <a href="kids.html">Kids</a>
+                </div>
+                <div class="footwear">
+                    <a href="footwear.html"><img src="../icon_sym/boot1.png"></a>
+                    <a href="footwear.html">Footwear</a>
+                </div>
+                <div class="homedecor">
+                    <a href="homedecor.html"><img src="../icon_sym/living-room1.png"></a>
+                    <a href="homedecor.html">Home decor</a>
+                </div>
+                <div class="top-brand">
+                    <a href="gift.html"><img src="../icon_sym/woman-bag.png"></a>
+                    <a href="gift.html">Handbags & wallet</a>
+                </div>
+                <div class="top-brand">
+                    <a href="flooring.html"><img src="../icon_sym/carpet.png"></a>
+                    <a href="flooring.html">Flooring</a>
+                </div>
+                <div class="top-brand">
+                    <a href="beauty.html"><img src="../icon_sym/products.png"></a>
+                    <a href="beauty.html">Beauty</a>
+                </div>
+                <div class="top-brand">
+                    <a href="electronics.html"><img src="../icon_sym/electronics.png"></a>
+                    <a href="electronics.html">Electronics</a>
+                </div>
+                <div class="top-brand">
+                    <a href="topbrand.html"><img src="../icon_sym/achievement.png"></a>
+                    <a href="topbrand.html">Top Brand</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="payment-form">
+        <h2>Payment Details</h2>
+        <form id="paymentForm">
+            <label for="cardNumber">Card Number:</label>
+            <input type="text" id="cardNumber" required><br>
+            <label for="expiryDate">Expiry Date:</label>
+            <input type="text" id="expiryDate" placeholder="MM/YYYY" required><br>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" required><br>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" required><br>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const paymentForm = document.getElementById("paymentForm");
+
+    paymentForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const cardNumber = document.getElementById("cardNumber").value;
+        const expiryDate = document.getElementById("expiryDate").value;
+        const cvv = document.getElementById("cvv").value;
+        const fullName = document.getElementById("fullName").value;
+
+        // Perform basic validation before proceeding
+        if (!cardNumber || !expiryDate || !cvv || !fullName) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Simulate a successful payment
+        alert("Payment successful! Thank you for your order.");
+        paymentForm.reset();
+    });
+});
+    </script> <!-- Add your payment page script -->
+</body>
+</html>

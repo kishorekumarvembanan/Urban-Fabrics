@@ -1,0 +1,232 @@
+.navbar{
+    background-color:#97CAEF;
+}
+.navbar{
+    background-color:rgb(53, 88, 170);
+}
+.side-nav{
+    width: 225px;
+    height: 675px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 8px;
+    margin-top: 0px;
+    position: fixed;
+    z-index: -1;
+}
+.f{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.brand{
+    height:210px;
+    width: 100%;
+    border:gray;
+    position: relative;
+    border: 1px solid rgb(218, 218, 218);
+}
+.brand p{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 7px;
+    font-weight: bolder;
+}
+.cbrand{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.brand label{
+    font-size: small;
+}
+.brand more{
+    margin-left: 8px;
+}
+.price{
+    height:157px;
+    width: 100%;
+    border:gray;
+    position: relative;
+    border: 1px solid rgb(218, 218, 218);
+}
+.price p{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 7px;
+    font-weight: bolder;
+}
+.price label{
+    font-size: small;
+}
+.color{
+    height:287px;
+    width: 100%;
+    border:gray;
+    position: relative;
+    border: 1px solid rgb(218, 218, 218);
+}
+.color p{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-bottom: 7px;
+    font-weight: bolder;
+}
+.color label{
+    font-size: small;
+}
+.border{
+    height:100%;
+    width: 100%;
+    border:gray;
+    position: relative;
+    border: 1px solid rgb(218, 218, 218);
+}
+.dot1{
+    height: 15px;
+    width: 15px;
+    background-color:    rgb(0, 116, 217);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.dot2{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.dot3{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(244, 235, 235);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.dot7{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(60, 68, 119);;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.dot4{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(94, 177, 96);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.dot5{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(159, 168, 171);;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+.dot6{
+    height: 15px;
+    width: 15px;
+    background-color:rgb(211, 75, 86);;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    margin-left: 5px;
+    margin-right: 4px;
+}
+
+.display{
+    width: 1180px;
+    height: 800px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    float: right;
+    margin-top: 140px;
+}
+.display p{
+    margin-left: 15px;
+    font-weight: bolder ;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.shirt1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.shirt1 img{
+    height:360px;
+    width: 210px;
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-right: 20px;
+    transition: 0.2s;
+  }
+  .shirt1 img:hover{
+    transform: scale(1.05);
+    z-index: 2;
+    box-shadow: 0 0 5px 0 rgb(168, 165, 165);
+
+}
+.display2{
+    width: 1180px;
+    height: 420px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    float: right;
+    margin-top: 20px;
+}
+.display2 p{
+    margin-left: 15px;
+    font-weight: bolder ;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.display3{
+    width: 1180px;
+    height: 420px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    float: right;
+    margin-top: 20px;
+}
+.display3 p{
+    margin-left: 15px;
+    font-weight: bolder ;
+    font-size: 1.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.tform{
+    position:fixed;
+    margin-top: 150px;
+    margin-left: 600px;
+}

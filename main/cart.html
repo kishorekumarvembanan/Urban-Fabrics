@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="icon" href="../u.png" type="image/icon type">
+    <title>URBAN FABRICS</title>
+</head>
+<body>
+    <style>
+        .navbar{
+            background-color: rgb(7, 161, 82);
+        }
+    </style>
+    <div class="tot-navbar">
+        <div class="navbar">
+            <div class="firstnav">
+                <a href="home.html"><h3>URBAN FABRICS</h3></a>
+            </div>
+            <div class="logo">
+                <img class="logoimg" src="../u.png">
+            </div>
+            <div class="secnav">
+                <input id="search-bar" type="text" placeholder="search here">
+                <img class="search-sym" src="../home_navbar_img/searchicon.png">
+            </div>
+            <div class="seller">
+                <a href="#"></a>
+            </div>
+            <div class="lastnav">
+                <img class="wishlist" src="../home_navbar_img/heart1.png">
+                <a href="wishlist.html">Wishlist</a>
+                <img  class="cart" src="../home_navbar_img/cart.png">
+                <a href="../main/cart.html">Cart</a>
+                
+            </div>
+        
+        </div>
+        <div class="select-section">
+            <div class="icon-sym">
+                <div class="home">
+                    <a href="home.html"><img src="../icon_sym/home1.png"></a>
+                    <a href="home.html">Home</a>
+                </div>
+                <div class="men">
+                    <a href="men.html"><img src="../icon_sym/male-clothes.png"></a>
+                    <a href="men.html">Men</a>
+                </div>
+                <div class="women">
+                    <a href="women.html"><img src="../icon_sym/woman_clothes.png"></a>
+                    <a href="women.html">Women</a>
+                </div>
+                <div class="kids">
+                    <a href="kids.html"><img src="../icon_sym/tshirt.png"></a>
+                    <a href="kids.html">Kids</a>
+                </div>
+                <div class="footwear">
+                    <a href="footwear.html"><img src="../icon_sym/boot1.png"></a>
+                    <a href="footwear.html">Footwear</a>
+                </div>
+                <div class="homedecor">
+                    <a href="homedecor.html"><img src="../icon_sym/living-room1.png"></a>
+                    <a href="homedecor.html">Home decor</a>
+                </div>
+                <div class="top-brand">
+                    <a href="gift.html"><img src="../icon_sym/woman-bag.png"></a>
+                    <a href="gift.html">Handbags & wallet</a>
+                </div>
+                <div class="top-brand">
+                    <a href="flooring.html"><img src="../icon_sym/carpet.png"></a>
+                    <a href="flooring.html">Flooring</a>
+                </div>
+                <div class="top-brand">
+                    <a href="beauty.html"><img src="../icon_sym/products.png"></a>
+                    <a href="beauty.html">Beauty</a>
+                </div>
+                <div class="top-brand">
+                    <a href="electronics.html"><img src="../icon_sym/electronics.png"></a>
+                    <a href="electronics.html">Electronics</a>
+                </div>
+                <div class="top-brand">
+                    <a href="topbrand.html"><img src="../icon_sym/achievement.png"></a>
+                    <a href="topbrand.html">Top Brand</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1>Your Cart</h1>
+  <div class="tcart">
+      <div id="cartItems"></div><br>
+        <div class="total">
+            <p>Price details</p>
+            <p style="font-size: 1.3rem; margin-top: 20px; margin-bottom: 50px; color: black;">Total: ₹ <span id="totalAmount">0</span></p>
+            <button id="placeorder">Place Order</button><br>
+            <button id="btnEmptyCart">Empty Cart</button>
+        </div>
+  </div>
+  <script src="../javascript/cart.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const placeOrderButton = document.getElementById("placeorder");
+    
+    placeOrderButton.addEventListener("click", function() {
+        // Redirect to the payment page when the "Place Order" button is clicked
+        window.location.href = "payment.html";
+    });
+        const cartItemsDiv = document.getElementById("cartItems");
+        const totalAmountSpan = document.getElementById("totalAmount");
+        const btnEmptyCart = document.getElementById("btnEmptyCart"); 
+        const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+        let total = 0;
+
+        if (cartItems.length > 0) {
+            cartItems.forEach(item => {
+                const productDiv = document.createElement("div");
+                productDiv.classList.add("cart-product");
+
+                const imageElement = document.createElement("img");
+                imageElement.src = item.imageUrl;
+
+                const itemPrice = parseFloat(item.price);
+                const itemTotal = itemPrice * item.quantity;
+                
+                const productDetails = document.createElement("p");
+                productDetails.innerHTML = `<div class="box"><p class="one">${item.id}</p><br><p class="two">₹${itemPrice}</p><br><br><p class="three"> Quantity: ${item.quantity}</p><br><br><p class="four"> Total: ₹${itemTotal.toFixed(2)}</p></div>`;
+                
+                const removeButton = document.createElement("label");
+                removeButton.innerHTML = "Remove";
+                removeButton.addEventListener("click", function() {
+                    removeCartItem(item.id);
+                    location.reload(); // Refresh the page to reflect the changes
+                });
+
+                productDiv.appendChild(imageElement);
+                productDiv.appendChild(productDetails);
+                productDiv.appendChild(removeButton);
+
+                cartItemsDiv.appendChild(productDiv);
+
+                total += itemTotal;
+            });
+
+            totalAmountSpan.textContent = total.toFixed(2);
+        }else {
+                // Display message when cart is empty
+                cartItemsDiv.innerHTML = "Your cart is empty.";
+                totalAmountSpan.textContent = "0.00";
+            }
+
+
+            btnEmptyCart.addEventListener("click", function() {
+                cartItemsDiv.innerHTML = "Your cart is empty.";
+                totalAmountSpan.textContent = "0.00";
+                localStorage.removeItem("cartItems");
+            });
+
+            function removeCartItem(productId) {
+                const updatedCartItems = cartItems.filter(item => item.id !== productId);
+                localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+            }
+    });
+</script>
+  
+</body>
+</html>

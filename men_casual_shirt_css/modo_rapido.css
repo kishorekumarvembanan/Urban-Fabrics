@@ -1,0 +1,311 @@
+.navbar{
+    background-color:rgb(53, 88, 170);
+}
+.cas-shirt{
+    height: auto;
+    width: 800px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    top:150px;
+    left:10px;
+    overflow: hidden;
+
+}
+.cas-shirt-img{
+    overflow: hidden;
+}
+.cas-shirt-img1{
+    overflow: hidden;
+}
+.cas-shirt p{
+    margin-left:20px;
+    font-weight: bolder ;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cas-shirt-img img{
+    height: 527px;
+    width: 392px;
+    margin-top:10px;
+    margin-left: 4px;
+}
+.cas-shirt-img img{
+    transition: 0.3s;
+  }
+  
+  .cas-shirt-img img:hover {
+    transform: scale(1.03);
+  }
+.cas-shirt-img1 img{
+    height: 527px;
+    width: 392px;
+    margin-top:10px;
+    margin-left: 4px;
+}
+.cas-shirt-img1 img{
+    transition: 0.3s;
+  }
+  
+  .cas-shirt-img1 img:hover {
+    transform: scale(1.03);
+  }
+.price-info{
+    position: fixed;
+    top:170px;
+    left:830px;
+}
+.rup{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.size1{
+    height: 35px;
+    width: 35px;
+    border: solid rgb(158, 155, 155);
+    border-radius: 50%;
+    display: inline;
+    position: absolute;
+    padding: 7px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.size1 p{
+    font-size: smaller;
+}
+.size1:hover{
+    background-color:gainsboro;
+}
+.size2{
+    height: 35px;
+    width: 35px;
+    border: solid rgb(158, 155, 155);
+    border-radius: 50%;
+    display: inline;
+    position: absolute;
+    padding: 7px;
+    margin-top: 20px;
+    left:45px;
+    cursor: pointer;
+}
+.size2 p{
+    font-size: smaller;
+}
+.size2:hover{
+    background-color:gainsboro;
+}
+.size3{
+    height: 35px;
+    width: 35px;
+    border: solid rgb(158, 155, 155);
+    border-radius: 50%;
+    display: inline;
+    position: absolute;
+    padding: 7px;
+    margin-top: 20px;
+    left:90px;
+    cursor: pointer;
+}
+.size3 p{
+    font-size: smaller;
+}
+.size3:hover{
+    background-color:gainsboro;
+}
+.size4{
+    height: 35px;
+    width: 35px;
+    border: solid rgb(158, 155, 155);
+    border-radius: 50%;
+    display: inline;
+    position: absolute;
+    padding: 7px;
+    margin-top: 20px;
+    left:135px;
+    cursor: pointer;
+}
+.size4 p{
+    font-size: smaller;
+}
+.size4:hover{
+    background-color:gainsboro;
+}
+.size5{
+    height: 35px;
+    width: 35px;
+    border: solid rgb(158, 155, 155);
+    border-radius: 50%;
+    display: inline;
+    position: absolute;
+    padding: 7px;
+    margin-top: 20px;
+    left:180px;
+    cursor: pointer;
+}
+.size5 p{
+    font-size: smaller;
+}
+.size5:hover{
+    background-color:gainsboro;
+}
+.a-cart{
+    position: absolute;
+    top:280px;
+    padding: 15px 35px 15px 25px;
+    background-color: #ff2459;;
+    font-weight: 700;
+    border: none;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    color: white;
+}
+.a-cart img{
+    height:20px;
+    width: 20px;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+.a-cart:hover{
+    background-color:brown;
+}
+.a-wishlist img{
+    height:20px;
+    width: 20px;
+    margin-left: -47px;
+    position: absolute;
+}
+.a-wishlist{
+    position: absolute;
+    top:280px;
+    left:200px;
+    padding: 15px 35px 15px 25px;
+    background-color: #ffffff;;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    color: rgb(0, 0, 0);
+    border: solid lightslategray;
+    cursor: pointer;
+}
+.a-wishlist p{
+    margin-left: 20px;
+}
+.a-wishlist:hover{
+    background-color: brown;
+    ;
+}
+.del{
+    position: absolute;
+    margin-top: 140px;
+}
+.del-img{
+    position: absolute;
+    height:25px;
+    width: 25px;
+    top:397px
+}
+.get{
+    font-weight: 400;
+    position: absolute;
+    top:400px;
+    left:35px
+}
+.pay{
+    position: absolute;
+    height:25px;
+    width: 25px;
+    top:437px
+}
+.get1{
+    font-weight: 400;
+    position: absolute;
+    top:440px;
+    left:35px
+}
+.ret{
+    position: absolute;
+    height:25px;
+    width: 25px;
+    top:477px
+}
+.get2{
+    font-weight: 400;
+    position: absolute;
+    top:480px;
+    left:35px
+}
+/* Add this CSS to your existing styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Styles for the wishlist modal overlay */
+.wishlist-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Styles for the wishlist modal content */
+.wishlist-modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Styles for the buttons inside the wishlist modal */
+.wishlist-modal button {
+    margin: 10px;
+    padding: 8px 16px;
+    background-color: #03a685;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.wishlist-modal button:hover {
+    background-color: #037c66;
+}

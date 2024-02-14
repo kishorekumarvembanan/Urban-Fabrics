@@ -1,0 +1,149 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.background{
+    background-image:url(./login_images/loginimg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.navbar{
+    display:flex;
+    height: 40px;
+    width:100%;
+    padding:10px 20px;
+    z-index:-1px;
+
+}
+.navbarin{
+    padding: 2px 20px 2px 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bolder;
+    
+}
+.navbarin a{
+    text-decoration: underline;
+    color: whitesmoke;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin-right:900px
+
+}
+.loginbutton{
+  background-color:slategrey;
+  margin-left:10px;
+  margin-top: 0px;
+  height: 25px;
+  width:50px;
+  outline: none;
+  border: 2px solid lightslategray;
+  border-radius: 10%;
+}
+
+@media (min-width:1200px) and (max-width:1400px) {
+    .logo{
+        margin-left: 50px;
+        margin-right:700px
+    }
+    .login{
+        margin-left:-60px
+    }
+    
+}
+@media (min-width:900px) and (max-width:1199px) {
+    .logo{
+        margin-right:500px;
+    }
+    
+}
+.login{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height:440px;
+    width: 400px;
+    border: 2px solid gray;
+    position: absolute;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background: transparent;
+    font-weight: bolder;
+    box-shadow: 0 0 30px;
+    visibility: hidden;
+}
+.open-popup{
+    visibility: visible;
+}
+.close-popup{
+    visibility: hidden;
+}
+.login h2{
+    margin-left: 160px;
+    margin-top: 60px;
+}
+.loginform{
+    color:whitesmoke;
+    margin-top:50px;
+    margin-left:80px;
+    font-size: 18px;
+}
+.loginform input{
+    align-items: center;
+}
+.submit{
+    margin-top:30px;
+    margin-left: 80px;
+    padding: 3px 4px;
+    height:30px;
+    width: 250px;
+    border-radius:5px;
+    background:rgb(60,60,60);
+    border: 1px solid black;
+}
+.rem{
+    color:whitesmoke;
+    padding-top: 10px;
+    font-size:15px;
+    font-weight:smaller;
+}
+#for{
+    text-decoration: underline;
+    color:whitesmoke;
+    font-size: 15px;
+    margin-left: 20px;
+    font-weight:smaller;
+
+}
+#dont{
+    color: whitesmoke;
+    margin-left: 80px;
+    margin-top:20px;
+    font-size: 15px;
+}
+#create{
+    color: whitesmoke;
+    float:right;
+    text-decoration: underline;
+    margin-top:-19px;
+    margin-right: 70px;
+}
+#closeButton{
+    margin-left:373px;
+    margin-bottom:-10px;
+    font-size: 1rem;
+    padding-top: 4px;
+}
+.input .box{
+    height: 25px;
+}
+.logoimg{
+    height: 70px;
+    width: 60px;
+    opacity: 25;
+    border-radius: 20px;
+}

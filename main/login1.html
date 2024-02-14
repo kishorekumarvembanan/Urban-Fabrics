@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../u.png" type="image/icon type">
+    <link rel="stylesheet" href="../css/login1.css">
+    <title>Urban Fabrics online clothing brand</title>
+</head>
+<body>
+    <nav class="navbar">
+		<div class="navdiv">
+			<div class="logo"><img class="logoimg" src="../u.png"></div>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+                <li><a href="#">Service</a></li>
+				<button class="loginbutton" onclick="openpopup()">Login</button>
+			</ul>
+		</div>
+	</nav>
+    <div class="login" id="login">
+        <span id="closeButton"><ion-icon name="close-circle-outline" onclick="closepopup()"></ion-icon></span>
+        <h2>Login</h2><br>
+        <form class="loginform">
+            <div class="input">
+                <span class="mail"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="box" id="mail" type="text" name="uname" maxlength="18" placeholder="Username" required>
+                <label for="uname">Email</label><br><br>
+            </div>
+            <div class="input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input class="box" id="pass" type="password" name="pass" maxlength="12" placeholder="Password" attribute="(*)" required>
+                <label for="pass">Password</label><br><br>
+            </div>
+            <label class="rem"><input type="checkbox">  Remember me</label>
+            <a id="for" href="#">forget password?</a>
+        </form>
+        <button class="submit" id="loginbtn">Login</button>
+        <p id="dont">Don't have a account?</p>
+        <a id="create" href="#">Create one</a>
+    </div>
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.2.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyBUOU-I5J1xb8rNr7Wtyjj3y_RX1ODxeHE",
+          authDomain: "urban-fabrics-592b1.firebaseapp.com",
+          databaseURL: "https://urban-fabrics-592b1-default-rtdb.asia-southeast1.firebasedatabase.app",
+          projectId: "urban-fabrics-592b1",
+          storageBucket: "urban-fabrics-592b1.appspot.com",
+          messagingSenderId: "1034957983239",
+          appId: "1:1034957983239:web:dd93d25085b2df48fbe4a2",
+          measurementId: "G-VPVMTFE2R6"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+    
+        import{getDatabase,child,set,push,get,update,remove,ref} 
+        from "https://www.gstatic.com/firebasejs/10.2.0/firebase-database.js";
+        
+        const db =getDatabase();
+
+    var mailbtn=document.getElementById("mail");
+    var passbtn=document.getElementById("pass");
+    var loginbtn=document.getElementById("loginbtn");
+    function Insertdata(){
+        push(ref(db,"People/"),{
+            Name:mailbtn.value,
+            Password:passbtn.value
+        })
+        .then(()=>{
+            window.location.assign("home.html");
+        });
+    }
+    loginbtn.addEventListener('click',Insertdata);
+        
+    </script>
+    <script>
+        function closepopup(){
+            login.classList.add("close-popup");
+            login.classList.remove("open-popup");
+        }
+        function openpopup(){
+            login.classList.add("open-popup");
+            login.classList.remove("close-popup");
+        }
+        // function nxtpage(){
+        //     var mail=document.getElementById("mail").value;
+        //     var pass=document.getElementById("pass").value;
+        //     if(mail=="kishore" && pass=="kishore123"){
+        //         window.location.assign("home.html");
+        // }
+        // else{
+        //     alert("Invalid login");
+        // }
+        // }
+    </script>
+
+    <!-- <script>
+        function nxtpage(){
+            window.location.assign("home.html");
+    }
+    </script> -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/icon type">
+    <link rel="stylesheet" href="login.css">
+    <title>URBAN FABRICS</title>
+</head>
+<body>
+    <div class="background">
+    <div class="navbar">
+        <div class="logo">
+            <img class="logoimg" src="./logo.png">
+        </div>
+        <div class="navbarin">
+            <a href="home.html">Home</a>
+        </div>
+        <div class="navbarin">
+            <a href="#">About</a>
+        </div>
+        <div class="navbarin">
+            <a href="#">Service</a>s
+        </div>
+        <div class="navbarin">
+            <a href="#">Contact</a>
+        </div>
+        <button class="loginbutton" onclick="openpopup()">Login</button>
+    </div>
+    
+    <div class="login" id="login">
+        <span id="closeButton"><ion-icon name="close-circle-outline" onclick="closepopup()"></ion-icon></span>
+        <h2>Login</h2><br>
+        <form class="loginform">
+            <div class="input">
+                <span class="mail"><ion-icon name="mail-outline"></ion-icon></span>
+                <input class="box" id="mail" type="text" name="uname" maxlength="18" placeholder="Username" required>
+                <label for="uname">Email</label><br><br>
+            </div>
+            <div class="input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input class="box" id="pass" type="text" name="pass" maxlength="12" placeholder="Password" attribute="(*)" required>
+                <label for="pass">Password</label><br><br>
+            </div>
+            <label class="rem"><input type="checkbox">  Remember me</label>
+            <a id="for" href="#">forget password?</a>
+        </form>
+        <button class="submit" onclick="nxtpage()">Login</button>
+        <p id="dont">Don't have a account?</p>
+        <a id="create" href="#">Create one</a>
+    </div>
+    <script>
+        function closepopup(){
+            login.classList.add("close-popup");
+            login.classList.remove("open-popup");
+                }
+        function nxtpage(){
+            var mail=document.getElementById("mail").value;
+            var pass=document.getElementById("pass").value;
+            if(mail=="kishore" && pass=="123"){
+                window.location.assign("home.html");
+        }
+        else{
+            alert("Invalid login");
+        }
+    }
+        function openpopup(){
+            login.classList.add("open-popup");
+            login.classList.remove("close-popup")
+        }
+        
+    
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</div>
+</body>
+</html>
